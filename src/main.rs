@@ -290,7 +290,6 @@ impl SuperLetter {
                 following = 1;
                 number.add_assign(LETTER_SINGLE_SIZE as i32);
             } else {
-                following = 0;
                 break;
             }
         }
@@ -417,7 +416,11 @@ struct ProgramArgs {
 
 impl ProgramArgs {
     fn print_usage() {
-        println!("Usage: ./petlik [-g] [-gf] [-h]");
+        print!("Usage: ./petlik [OPTIONS]\n\
+                    \tOptions:\n\
+                    \t-h, --help : printing program usage\n\
+                    \t-g         : printing generated instructions\n\
+                    \t-gf        : printing generated instructions ONLY, without executing them\n");
     }
 }
 
